@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-07 15:43:24.586028",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_bxna",
+  "amended_from",
+  "section_break_eokl",
+  "student_id",
+  "student_name",
+  "book_name",
+  "column_break_qrrr",
+  "issued_date",
+  "expected_return_date",
+  "return_date",
+  "penalty_days",
+  "penalty_amount",
+  "section_break_lhcq",
+  "select_issue_document",
+  "column_break_fajk",
+  "contact_number",
+  "section_break_ncvt",
+  "isbn",
+  "author_name",
+  "book_receiver",
+  "column_break_dyhz",
+  "publisher",
+  "language",
+  "book_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_eokl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Book Return",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_lhcq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "select_issue_document.book_name",
+   "fieldname": "book_name",
+   "fieldtype": "Link",
+   "label": "Book Name",
+   "options": "Book",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "student_id.mobile_no",
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact No."
+  },
+  {
+   "fieldname": "column_break_fajk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_id",
+   "fieldtype": "Link",
+   "label": "Student ID",
+   "options": "User"
+  },
+  {
+   "fetch_from": "student_id.full_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "select_issue_document.publisher",
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "select_issue_document.isbn",
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "select_issue_document.language",
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "select_issue_document.book_price",
+   "fieldname": "book_price",
+   "fieldtype": "Currency",
+   "label": "Book Price",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ncvt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_dyhz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "select_issue_document.author_name",
+   "fieldname": "author_name",
+   "fieldtype": "Link",
+   "label": "Author Name",
+   "options": "Book Author",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qrrr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": ".DD.-.MM.-.YYYY.-.BR.-.{student_id}.-"
+  },
+  {
+   "fetch_from": "select_issue_document.issue_on",
+   "fieldname": "issued_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Issued Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fetch_from": ".expected_return_date",
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Return Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "select_issue_document",
+   "fieldtype": "Link",
+   "label": "Select Issue Document",
+   "options": "Book Issue"
+  },
+  {
+   "fieldname": "book_receiver",
+   "fieldtype": "Link",
+   "label": "Book Receiver",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_bxna",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "select_issue_document.expected_return_date",
+   "fieldname": "expected_return_date",
+   "fieldtype": "Date",
+   "label": "Expected Return Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "penalty_days",
+   "fieldtype": "Int",
+   "label": "Penalty Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "penalty_amount",
+   "fieldtype": "Currency",
+   "label": "Penalty Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-27 14:03:21.014376",
+ "modified_by": "Administrator",
+ "module": "Blue Cloud",
+ "name": "Book Return",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
