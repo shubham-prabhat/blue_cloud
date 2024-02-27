@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:book_name",
+ "creation": "2024-02-07 13:14:28.991232",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "last_issue_document",
+  "last_return_document",
+  "column_break_zahe",
+  "current_user",
+  "expected_available_on",
+  "section_break_ep1i",
+  "book_name",
+  "column_break_unru",
+  "amended_from",
+  "image",
+  "section_break_hipc",
+  "author",
+  "column_break_vejw",
+  "status",
+  "section_break_vmty",
+  "publisher",
+  "language",
+  "column_break_glgy",
+  "isbn",
+  "book_price",
+  "section_break_tvcy",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ep1i",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Book",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "book_name",
+   "fieldtype": "Data",
+   "label": "Book Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_unru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach",
+   "label": "Image"
+  },
+  {
+   "fieldname": "section_break_hipc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Link",
+   "label": "Author",
+   "options": "Book Author"
+  },
+  {
+   "fieldname": "column_break_vejw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Book Status",
+   "options": "Select\nAvailable\nNot Available\nUpcoming\nDiscontinued"
+  },
+  {
+   "fieldname": "section_break_vmty",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "column_break_glgy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN"
+  },
+  {
+   "fieldname": "section_break_tvcy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "book_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Book Price",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_issue_document",
+   "fieldtype": "Link",
+   "label": "Last Issue Document",
+   "options": "Book Issue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zahe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_user",
+   "fieldtype": "Link",
+   "label": "Current User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_available_on",
+   "fieldtype": "Date",
+   "label": "Expected Available On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_return_document",
+   "fieldtype": "Link",
+   "label": "Last Return Document",
+   "options": "Book Return",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Book Issue",
+   "link_fieldname": "book_name"
+  },
+  {
+   "link_doctype": "Book Return",
+   "link_fieldname": "book_name"
+  }
+ ],
+ "modified": "2024-02-12 18:16:17.839785",
+ "modified_by": "Administrator",
+ "module": "Blue Cloud",
+ "name": "Book",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "book_name"
+}

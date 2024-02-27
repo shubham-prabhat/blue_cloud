@@ -1,1 +1,7 @@
-# blue_cloud
+## Blue Cloud
+
+Official App
+
+#### License
+
+mit
